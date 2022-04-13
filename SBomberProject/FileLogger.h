@@ -4,15 +4,17 @@
 #include <iostream>
 #include <fstream>
 
+using namespace std;
+
 class FileLogger
 {
 public:
-	FileLogger(const std::string& FN);
+	FileLogger(const string& FN);
 	~FileLogger();
-	void WriteToLog(const std::string& str);
-	void WriteToLog(const std::string& str, int n);
-	void WriteToLog(const std::string& str, double d);
-	std::string GetCurDateTime();
+	void WriteToLog(const string& str);
+	void WriteToLog(const string& str, int n);
+	void WriteToLog(const string& str, double d);
+	string GetCurDateTime();
 private:
-	std::ofstream logOut;
+	ofstream logOut;
 };
